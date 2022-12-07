@@ -15,7 +15,8 @@ void ConfigureServices(ServiceCollection serviceCollection, IConfiguration confi
         .AddHttpClient()
         .AddTransient<IInternalHttpClientService, InternalHttpClientService>()
         .AddTransient<IUserService, UserService>()
-        .AddTransient<IUsersListService,UsersListService>()
+        .AddTransient<IUsersListService, UsersListService>()
+        .AddTransient<IRegisterService, RegisterService>()
         .AddTransient<App>();
 }
 

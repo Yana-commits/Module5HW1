@@ -13,7 +13,6 @@ namespace Module5HW1.Services.Abstractions
         Task<UserDto> GetUserById(int id);
         Task<UserResponse> CreateUser(string name, string job);
         Task<UserResponse> UpdateUser(string name, string job, int id);
-        Task<MyUserDto> GetMyUserById(int id);
         Task<bool> DeliteUser(int id);
     }
 }

@@ -41,18 +41,7 @@ namespace Module5HW1.Services
 
             return result?.Data;
         }
-        public async Task<MyUserDto> GetMyUserById(int id)
-        {
-            var result = await _httpClientService.SendAsync<BaseResponse<MyUserDto>, object>($"{_options.Host}{_userApi}{id}", HttpMethod.Get);
-
-            if (result?.Data != null)
-            {
-                _logger.LogInformation($"User with id = {result.Data.Id} was found");
-            }
-
-            return result?.Data;
-        }
-
+      
         public async Task<UserResponse> CreateUser(string name, string job)
         {
             var result = await _httpClientService.SendAsync<UserResponse, UserRequest>(
